@@ -8,9 +8,13 @@ class Bomb:
     plates = None
     ports = dict()
 
-    def __init__(self, batteries: int, holders: int, serialNumber: str) -> None:
+    def __init__(self, batteries: int, holders: int, serialNumber: str, unlit: list[str], lit: list[str], ports: list[str], plates: int) -> None:
         self.holders = holders
         self.serialNumber = serialNumber
+        self.indicatorsLit = lit
+        self.indicatorsUnlit = unlit
+        self.plates = plates
+        self.ports = ports
         if batteries == holders:
             self.batteriesAA = 0
             self.batteriesD = batteries
