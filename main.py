@@ -1,5 +1,6 @@
 from modules.emojimath import solveEmojiMath
 from modules.wires import solveWires
+from modules.button import solveButton
 from bomb.bomb import Bomb
 
 
@@ -34,11 +35,17 @@ while True:
         case "emojimath":
             print("Solving emoji math")
             print(solveEmojiMath(input("What is the display saying: ")))
+        case "button":
+            print("Solving button")
+            color = input("Color of the button: ")
+            text = input("What's the text on the button: ")
+            print(solveButton(bomb, color, text))
         case "wires":
             print("Solving wires")
             print(
                 "I will ask you the color of the wires type them in the order the defuser is telling them.\nType 'done' when there are no more wires.")
             wire = input("What color is the wire: ")
+            wire = wire.strip().lower()
             wires = list()
             while wire != "done":
                 wires.append(wire.lower().strip())
