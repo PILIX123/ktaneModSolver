@@ -55,7 +55,7 @@ while True:
         case "simonsays":
             print("Solving Simon Says")
             strikes = int(input("How many strikes do you have?\n"))
-            print(solveSimonSays(bomb, strikes))
+            solveSimonSays(bomb, strikes)
         case "q":
             exit()
         case _:

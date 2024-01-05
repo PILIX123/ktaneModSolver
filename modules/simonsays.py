@@ -6,6 +6,7 @@ def printAnswers(answers: list):
     print("Tap the colors in the following order.")
     for color in answers:
         print(color, end=" ")
+    print("\n")
 
 
 def solveSimonSays(bomb: Bomb, strikes: int) -> str:
