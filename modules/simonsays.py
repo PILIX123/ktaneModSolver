@@ -10,6 +10,7 @@ def printAnswers(answers: list):
 
 def solveSimonSays(bomb: Bomb, strikes: int) -> str:
     answerSequence = list()
+    print("Type done when the module is solved")
     latestColor = input("Whats the last color in the sequence: ")
     latestColor = latestColor.strip().lower()
 

@@ -1,6 +1,7 @@
 from modules.emojimath import solveEmojiMath
 from modules.wires import solveWires
 from modules.button import solveButton
+from modules.simonsays import solveSimonSays
 from bomb.bomb import Bomb
 
 
@@ -51,6 +52,10 @@ while True:
                 wires.append(wire.lower().strip())
                 wire = input("What color is the wire: ")
             print(solveWires(bomb, wires))
+        case "simonsays":
+            print("Solving Simon Says")
+            strikes = int(input("How many strikes do you have?\n"))
+            print(solveSimonSays(bomb, strikes))
         case "q":
             exit()
         case _:
